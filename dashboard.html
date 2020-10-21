@@ -12,11 +12,15 @@
    <link rel="icon" href="assets/images/ASIT_Logo-01.png" />
     <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/styles/dashboard.min.css"> -->
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/css/bootstrap.min.css" integrity="sha512-oc9+XSs1H243/FRN9Rw62Fn8EtxjEYWHXRvjS43YtueEewbS6ObfXcJNyohjHqVKFPoXXUxwc+q1K7Dee6vv9g==" crossorigin="anonymous" />
     <link rel="stylesheet" href="assets/styles/dashboard.min.css">
 </head>
 <body>
-    <div class="container-fluid">                
+    <div id="warning-message">
+      Please See the website in Landscape Mode.
+    </div>
+    <div id="wrapper" class="container-fluid">                
         <div class="vertical-nav" id="sidebar">
             <div class="mb-1">
                 <div class="media d-flex align-items-center justify-content-center">
@@ -175,189 +179,197 @@
 
                             <div class="left-part col-10 padding-0">
                                 <span class="header-text">Good Morning, Absar</span>
-                                <span class="PageName">DashBoard</span>
+                                
                             </div>
                             <div class="right-part col-2 padding-0">
-                                <select class=" form-control dropdown-css" id="sel1">
-                                    <option>Admin</option>
-                                    <option>User</option>
+                                <select class=" form-control dropdown-css" id="sel1" onchange="myFunction()">
+                                    <option value="Admin">Admin</option>
+                                    <option value="User">User</option>
                                   </select>
                             </div>
                         </div>
-                        <div class="row tile">
-                            <div class="col-md-4 padding-1">
-                                <div class="card">
-                                  <a href="#">
-                                    <div class="card-body number-data">
-                                     
-                                      <div class="info-text">
-                                        <h4>10</h4>
-                                        <small>Today's Activities</small>
-                                      </div>
-                                     <div class="icon-container">
-                                      <i class="fas fa-tasks"></i>
-                                     </div>
-                                  
-                                    </div>
-                                  </a>
-                                  </div>
-                                
-                            </div>
-                            <div class="col-md-4 padding-1">
-                                <div class="card">
-                                  <a href="#">
-                                    <div class="card-body number-data">
-                                     
-                                      <div class="info-text">
-                                        <h4>06</h4>
-                                        <small>User Offline</small>
-                                      </div>
-                                     <div class="icon-container">
-                                      <i class="fas fa-users-slash"></i>
-                                     </div>
-                                  
-                                    </div>
-                                  </a>
-                                  </div>
-                                
-                            </div>
-                            <div class="col-md-4 padding-1">
-                                <div class="card">
-                                  <a href="#">
-                                    <div class="card-body number-data">
-                                     
-                                      <div class="info-text">
-                                        <h4>20</h4>
-                                        <small>Chat System</small>
-                                      </div>
-                                     <div class="icon-container">
-                                      <i class="fas fa-comments"></i>
-                                     </div>
-                                  
-                                    </div>
-                                  </a>
-                                  </div>
-                                
-                            </div>
-                        </div>                       
-                        <div class="row tile">
-                            <div class="col-md-8 padding-1 graph">
-                                <div class="card">
-                                    <div class="card-body">
-                                      <div class="graph-header">
-                                        <span>Sales Monthly Target Vs Actual Graph</span>
-                                        <a class="viewall" href="">View All</a>
-                                      </div>
-                                      <div class="graph-main"></div>
-                                      <div class="graph-buttons">                                        
-                                        <button class="btn btn-light rounded-pill shadow-sm button-item active">Sales</button>
-                                        <button class="btn btn-light rounded-pill shadow-sm button-item">Purchase</button>
-                                        <button class="btn btn-light rounded-pill shadow-sm button-item">Accounts</button>
-                                        <button class="btn btn-light rounded-pill shadow-sm button-item">Construction</button>
-                                      </div>
-                                    </div>
-                                  </div>
-                            </div>
-                            <div class="col-md-4 padding-1 row-divide">
-                                <div class="card">                                 
-                                    <div class="card-body">
-                                      <div class="header-tile">
-                                        <span>Recent Activities</span>
-                                        <a href="" class="viewall">View All</a>
-                                      </div>
-                                      <div class="main-tile">
-                                        <ul>
-                                          <li>
-                                            <a href="#">
-                                              <p>Voucher Entry</p>
-                                              <small>10 minutes ago</small>
-                                            </a>
-                                          </li>
-                                          <li>
-                                            <a href="#">
-                                              <p>Voucher Entry</p>
-                                              <small>10 minutes ago</small>
-                                            </a>
-                                          </li>
-                                          <li>
-                                            <a href="#">
-                                              <p>Voucher Entry</p>
-                                              <small>10 minutes ago</small>
-                                            </a>
-                                          </li>
-                                          <li>
-                                            <a href="#">
-                                              <p>Voucher Entry</p>
-                                              <small>10 minutes ago</small>
-                                            </a>
-                                          </li>
-                                          <li>
-                                            <a href="#">
-                                              <p>Voucher Entry</p>
-                                              <small>10 minutes ago</small>
-                                            </a>
-                                          </li>
-
-                                        </ul>
-                                      </div>
-                                    </div>
-                                  </div>
+                        <span class="PageName">DashBoard</span>
+                        <section id="admin">
+                          <div class="row tile">
+                              <div class="col-md-4 padding-1">
                                   <div class="card">
+                                    <a href="#">
+                                      <div class="card-body number-data">
+                                      
+                                        <div class="info-text">
+                                          <h4>10</h4>
+                                          <small>Today's Activities</small>
+                                        </div>
+                                      <div class="icon-container">
+                                        <i class="fas fa-tasks"></i>
+                                      </div>
                                     
+                                      </div>
+                                    </a>
+                                    </div>
+                                  
+                              </div>
+                              <div class="col-md-4 padding-1">
+                                  <div class="card">
+                                    <a href="#">
+                                      <div class="card-body number-data">
+                                      
+                                        <div class="info-text">
+                                          <h4>06</h4>
+                                          <small>User Offline</small>
+                                        </div>
+                                      <div class="icon-container">
+                                        <i class="fas fa-users-slash"></i>
+                                      </div>
+                                    
+                                      </div>
+                                    </a>
+                                    </div>
+                                  
+                              </div>
+                              <div class="col-md-4 padding-1">
+                                  <div class="card">
+                                    <a href="#">
+                                      <div class="card-body number-data">
+                                      
+                                        <div class="info-text">
+                                          <h4>20</h4>
+                                          <small>Chat System</small>
+                                        </div>
+                                      <div class="icon-container">
+                                        <i class="fas fa-comments"></i>
+                                      </div>
+                                    
+                                      </div>
+                                    </a>
+                                    </div>
+                                  
+                              </div>
+                          </div>                       
+                          <div class="row tile">
+                              <div class="col-md-8 padding-1 graph">
+                                  <div class="card">
+                                      <div class="card-body">
+                                        <div class="graph-header">
+                                          <span>Sales Monthly Target Vs Actual Graph</span>
+                                          <a class="viewall" href="">View All</a>
+                                        </div>
+                                        <div class="graph-main">
+                                          <div id="container"></div>
+                                        </div>
+                                        <div class="graph-buttons">                                        
+                                          <button id="sale" class="btn btn-light rounded-pill shadow-sm button-item active">Sales</button>
+                                          <button id="purchase" class="btn btn-light rounded-pill shadow-sm button-item">Purchase</button>
+                                          <button id="accounts" class="btn btn-light rounded-pill shadow-sm button-item">Accounts</button>
+                                          <button id="construction" class="btn btn-light rounded-pill shadow-sm button-item">Construction</button>
+                                        </div>
+                                      </div>
+                                    </div>
+                              </div>
+                              <div class="col-md-4 padding-1 row-divide">
+                                  <div class="card">                                 
                                       <div class="card-body">
                                         <div class="header-tile">
-                                          <span>Today's Schedule</span>
+                                          <span>Recent Activities</span>
                                           <a href="" class="viewall">View All</a>
                                         </div>
                                         <div class="main-tile">
                                           <ul>
                                             <li>
                                               <a href="#">
-                                                <div class="left-side">
-                                                  <p>Task 1</p>
-                                                  <small>Status: UnDone</small>
-                                                </div>
-                                                <div class="right-side">
-                                                  <p>Accounts</p>
-                                                  <small>Assigned By</small>
-                                                </div>
-
+                                                <p>Voucher Entry</p>
+                                                <small>10 minutes ago</small>
                                               </a>
                                             </li>
                                             <li>
                                               <a href="#">
-                                                <div class="left-side">
-                                                  <p>Task 1</p>
-                                                  <small>Status: UnDone</small>
-                                                </div>
-                                                <div class="right-side">
-                                                  <p>Accounts</p>
-                                                  <small>Assigned By</small>
-                                                </div>
-
+                                                <p>Voucher Entry</p>
+                                                <small>10 minutes ago</small>
                                               </a>
                                             </li>
                                             <li>
                                               <a href="#">
-                                                <div class="left-side">
-                                                  <p>Task 1</p>
-                                                  <small>Status: UnDone</small>
-                                                </div>
-                                                <div class="right-side">
-                                                  <p>Accounts</p>
-                                                  <small>Assigned By</small>
-                                                </div>
-
+                                                <p>Voucher Entry</p>
+                                                <small>10 minutes ago</small>
                                               </a>
                                             </li>
-  
+                                            <li>
+                                              <a href="#">
+                                                <p>Voucher Entry</p>
+                                                <small>10 minutes ago</small>
+                                              </a>
+                                            </li>
+                                            <li>
+                                              <a href="#">
+                                                <p>Voucher Entry</p>
+                                                <small>10 minutes ago</small>
+                                              </a>
+                                            </li>
+
                                           </ul>
                                         </div>
                                       </div>
-                                    
-                                  </div>
-                            </div>
-                        </div>
+                                    </div>
+                                    <div class="card">
+                                      
+                                        <div class="card-body">
+                                          <div class="header-tile">
+                                            <span>Today's Schedule</span>
+                                            <a href="" class="viewall">View All</a>
+                                          </div>
+                                          <div class="main-tile">
+                                            <ul>
+                                              <li>
+                                                <a href="#">
+                                                  <div class="left-side">
+                                                    <p>Task 1</p>
+                                                    <small>Status: UnDone</small>
+                                                  </div>
+                                                  <div class="right-side">
+                                                    <p>Accounts</p>
+                                                    <small>Assigned By</small>
+                                                  </div>
+
+                                                </a>
+                                              </li>
+                                              <li>
+                                                <a href="#">
+                                                  <div class="left-side">
+                                                    <p>Task 1</p>
+                                                    <small>Status: UnDone</small>
+                                                  </div>
+                                                  <div class="right-side">
+                                                    <p>Accounts</p>
+                                                    <small>Assigned By</small>
+                                                  </div>
+
+                                                </a>
+                                              </li>
+                                              <li>
+                                                <a href="#">
+                                                  <div class="left-side">
+                                                    <p>Task 1</p>
+                                                    <small>Status: UnDone</small>
+                                                  </div>
+                                                  <div class="right-side">
+                                                    <p>Accounts</p>
+                                                    <small>Assigned By</small>
+                                                  </div>
+
+                                                </a>
+                                              </li>
+    
+                                            </ul>
+                                          </div>
+                                        </div>
+                                      
+                                    </div>
+                              </div>
+                          </div>
+                        </section>
+                        <section id="user">
+                          sffdgfds
+                        </section>
                     </div>
 
                 </div>
@@ -415,6 +427,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js" integrity="sha512-ubuT8Z88WxezgSqf3RLuNi5lmjstiJcyezx34yIU2gAHonIi27Na7atqzUZCOoY4CExaoFumzOsFQ2Ch+I/HCw==" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
     <script src="assets/js/dashboard.js"></script>
     
 </body>
